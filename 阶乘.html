@@ -33,21 +33,43 @@
 
      <input type="button" value="测试">
     <script>
-        /*函数优先级高于变量*/
-       // 变量提升 ：在函数内部 局部变量 提升 var a 用传过来的实参赋值
+        var n;
+        funa(3);
+        //var x=fune(3);
+       // console.log(x);
+        function funa(n){
+            var sun=0;
+            for(var i=1;i<n+1;i++){
+                sun=sun+fune(i);
+                console.log(sun);
+            }
+            console.log(sun);
+        }
+        function fune(n) {
+            var sum=1;
+            for(var i=2;i<n+1;i++){
+                sum=sum*i;
+            }
+            return(sum);
+        }
+
+         /*函数优先级高于变量*/
+        // 变量提升 ：在函数内部 局部变量 提升 var a 用传过来的实参赋值
+        /*
          var i=0;
          function fun(){
          console.log(i);
          }
          fun();
          alert(a);//输出函数体
-         a();
+         a();//10
          var a=3;
          function a(){
          alert(10);
          }
-         alert(a);
-
+         alert(a);//3
+         //但要避免 函数名和变量名向同
+         */
     </script>
 
 </body>
