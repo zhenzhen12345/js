@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #div1{
+            height:800px;
+            width:100px;
+            background-color:pink;
+        }
+        #div2{
+            height:800px;
+            width:100px;
+            background-color:green;
+        }
+        .btn{
+            position:fixed;
+            bottom:10px;
+            right:10px;
+        }
+    </style>
+</head>
+<body>
+<!--
+id 权重100 style 1000  类 10 标签
+-->
+<div id="div1">
+    <p style="color:yellow;">haha</p>
+
+</div>
+<div id="div2">
+
+</div>
+<button class="btn" onclick="goTop()">返回顶部</button>
+<div></div>
+<script>
+     var thisTop=0;
+     //window 绑定滚动事件
+        window.onscroll=function(){
+       thisTop=document.documentElement.scrollTop;
+      // console.log(thisTop);
+
+    };
+    function goTop() {
+           var timer= setInterval(function () {
+               console.log('1');
+           window.scrollTo(thisTop-=10,thisTop-=10);
+           if(thisTop<10){
+               clearInterval(timer);
+           }
+        },5)
+
+    }
+    /*页面过度效果*/
+    /*
+    //定时函数 返回的是序列 标号 隔间隔时间 就执行一次
+  var timer=setTimeout(
+        function(){
+            alert('1');
+        },1000
+    )
+    clearTimeout(timer);
+    var i=0;
+
+    var timer2=setInterval(function(){console.log(i);i++;if (i>10){
+        clearInterval(timer2);
+    }},1000)
+    */
+    //出现setTimeout 放到任务队列里 后执行
+    /*
+    setTimeout(function(){console.log('2')},0);
+    console.log('1');
+    */
+     //js变量提升面试
+     console.log(window.history);
+     console.log(window.location);//跳转href  location.href
+</script>
+</body>
+</html>

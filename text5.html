@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        ul{
+            list-style: none;
+        }
+        *{
+            padding:0;
+            margin:0;
+        }
+        .aa{
+            border:1px solid #e5e5e5;
+            width:100px;
+            text-align: center;
+            background: yellow;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <ul>
+            <li><button>设置代办</button></li>
+            <li><button>设置未读</button></li>
+            <li><button>设置已读</button></li>
+            <li><button>设置右键</button></li>
+            <li class="aa">设置宽度</li>
+         </ul>
+    </div>
+
+     <input type="button" value="测试">
+    <script>
+        /*函数优先级高于变量*/
+       // 变量提升 ：在函数内部 局部变量 提升 var a 用传过来的实参赋值
+         var i=0;
+         function fun(){
+         console.log(i);
+         }
+         fun();
+         alert(a);//输出函数体
+         a();
+         var a=3;
+         function a(){
+         alert(10);
+         }
+         alert(a);
+
+    </script>
+
+</body>
+</html>

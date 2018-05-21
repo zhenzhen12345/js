@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+</head>
+
+<body>
+
+    <!--<script>
+        alert('aa');
+    </script> 一种方式是在html里面写script标签 一种方式 是在js页面里写 alert弹出对话框-->
+    <script>
+        /*
+       var text=window.prompt("这是个测试","");
+       var text1=text*1;
+       if(text1==0){
+          text1= parseInt(text);
+
+       }
+       if (isNaN(text1)){
+           alert('不是一个数字')
+       }else{
+           if(text<100&&text>=90){
+               alert('So so')
+           }else{
+               if(text<90&&text>=80){
+                   alert('JUst last dance')
+               }else{
+                   if(text<80&&text>=70){
+                       alert('bye bye')
+                   }else{
+                      if (text<70&&text>=0){
+                          alert('ok')
+                      }else{
+                          alert('usb')
+                      }
+                   }
+
+               }
+           }
+       }
+     var condition=prompt('请输入数字');//输入的是带有引号的数字所以与swich中的数字比较不相同
+       //var condition=4;
+       switch(condition) {
+           case(4): {
+                 alert('fgd');
+               //  break;
+             }
+           case(3): {
+                 alert('gfdl')
+             }
+           case(2): {
+                 alert('gfdl')
+             }
+           case(1): {
+                 alert('gfdl')
+             }
+         }
+
+          if(condition==1){
+               alert('hahah')
+             }//两个等号表示值相等，三个等号类型也要相等
+        if(condition===1){
+               alert('hdhlsfh')
+        }
+
+        内置对象
+         console.log(Math.ceil(1.89));
+         console.log(Math.pow(2,4));
+         console.log(Math.random());//产生随机数 包含0不包含 1
+         Math.ceil(Math.random()*100);
+         var date=new Date('July 12');
+         console.log(date.getMonth()+'月');
+         //console.log(date.getDate()+"日");
+         var date1=new Date();
+         date1.setDate(12);
+         console.log(date1.getDate());
+         var date3=new Date();
+         /*超过当前月份和天数*/
+        /*
+         date3.setDate(33);
+         console.log(date3.getMonth()+1+'月');
+         console.log(date3.getDate());
+         var arr=new Array(3);
+         arr[0]=1;
+         arr[1]=2;
+         arr[2]=3;
+         console.log(arr);
+         console.log(arr.length);
+
+       //  Monthed();/*函数升量*/
+         /*var a;
+           function Monthed()
+       {
+           a=5;
+          console.log(a+'aaa')
+       }
+
+       console.log(a+'**');
+       */
+         /*
+   var arr=new Array();
+     arr[0]='h';
+     arr[1]='a';
+     arr[2]='p';
+     arr[3]='bb';
+     console.log(arr.concat('i',1));
+   var arr1=new Array();
+       arr1[0]='*';
+       arr1[1]='&';
+       arr1[2]='*"';
+       arr1[3]='b*';
+   var arr2=new Array();
+       arr2[0]='*';
+       arr2[1]='&';
+       arr2[2]='*"';
+       arr2[3]='b*';
+       console.log(arr1.concat(arr,arr2));
+   var arr3=[1,2,'3','4'];
+   document.write(arr3.join("*"));
+   var arr4=['tom','jili','mouse'];
+   document.write(arr4);
+   document.write("<br />");
+   document.write(arr4.pop());
+   document.write("<br />");
+   document.write(arr4);
+   console.log(arr4.push('animal'));
+   console.log(arr4);
+   console.log(arr4.reverse());
+       function fnTest() {
+           var args = arguments;
+           switch (arguments.length) {
+               case 0 :
+                   return "没有输入！！！";
+               case 1 :
+                   return "一个参数："+args[0];
+               case 2 :
+                   return "二个参数："+args[0]+" 和 "+ args[1];
+           }
+       }
+       alert(fnTest());
+       alert(fnTest(1));
+       alert(fnTest(2));
+        var d=new Date();
+        d.setFullYear(2004);
+        d.setMonth(11);//设置月份为12月,注意月份是从0开始计数的
+        d.setDate(2);
+        d.setHours(6);
+        d.setMinutes(12);
+        d.setSeconds(12);
+        alert(d.getDay())
+        var arr = [2,3,4];
+        alert(arr.join("#"));
+        //事实上当我们直接输出数组时,系统会自动调用这样的方法
+        alert(arr);
+        alert(arr.join(","));//两句的输出效果是一样的
+        var arr =[1,2,3];
+        arr["property"]="some data";
+
+        alert(arr.property);//"some data"
+        console.log(arr);
+        //但注意的是,数组的length属性只能报告具有数字下标的元素的个数
+        alert(arr.length);//3
+        console.log(arr);
+        var x=Math.random();
+        console.log('x的值是'+x);
+        var y=Math.random();
+        console.log('y的值是'+y);
+        var condition=x>y?console.log('输出x和y中的最大值是'+x): console.log('输出x和y中的最大值是'+y);
+        */
+         /*
+        var today = new Date();   //获取当天日期
+        var year = today.getFullYear();   //获取当天年份
+        console.log(year);
+        var creat=new Date("May 21,2004");
+        var year1=creat.getFullYear();
+        if (year1%100!=0){
+            console.log('该year1是闰年');
+        }
+        if ((year%4==0&&year%100!=0)||year%400==0){
+            console.log('该页面是闰年');
+        }
+        else {
+            console.log('该页面不是闰年');
+        }
+        */
+         //数组中unshift 向数组开头添加元素，并返回新的长度
+        /*var arr=new Array(6,3);
+          console.log(arr);
+        var arr1=new Array(6);
+        console.log(arr1);
+        var arr3=['tom','cat','hoo','fjl'];
+        arr3.unshift(1);
+        console.log(arr3);
+        */
+        // for in 遍历数组中的元素
+/*
+        var arr=['tom','cat','sfdf','dfd','dfdd'];
+        for(var x in arr){
+            console.log(arr[x]);
+        }
+        for (var i=0;i<arr.length;i++){
+            console.log(arr[i]);
+        }
+
+        var age=window.prompt("请输入用户的年龄");
+        age1=age*1;
+        if(age1==0){
+            age1=parseInt(age);
+        }
+        if(isNaN(age1)){
+           alert('输入的年龄为无效值，请重新输入')
+        }else{
+            if(age<14)
+            {
+                document.write('这个年龄段为儿童')
+            }else {
+                if (age >= 14 && age < 24) {
+                    document.write('这个年龄段为青少年')
+                }
+                else {
+                    if
+                    (age > 24 && age < 40) {
+                        document.write('这个年龄段为青年')
+                    } else {
+                        if (age >= 40 && age < 60) {
+                            document.write('这个年龄段为中年')
+                        } else {
+                            document.write('这个年龄段为老年')
+                        }
+                    }
+                }
+            }
+        }
+*/
+/*
+    var date1=window.prompt("请用户输入数字范围0~6");
+    var arr=new Array();
+     arr[0]='星期日';
+     arr[1]='星期一';
+     arr[2]='星期二';
+     arr[3]='星期三';
+     arr[4]='星期四';
+     arr[5]='星期五';
+     arr[6]='星期六';
+    for(date1 in arr){
+        alert(arr[date1]);
+        break;
+    }
+    */
+    /*
+   var sum=1;
+   var sum1=0;
+   for(var i=1;i<=10;i++){
+       sum=sum*i;
+       //console.log(i+"阶乘等于"+sum);
+       sum1=sum1+sum;
+   }
+   console.log('输出1到10的阶乘之和的另一种方式'+sum1);
+   */
+   /*
+   var i2;
+   for(var i=1;i<=10;i++){
+       i2=i*i;
+       console.log(i+"二次方等于"+i2);
+        }
+     */
+
+   var sum=1;
+   var i=1;
+   var sum1=0;
+   do{
+       sum=sum*i;
+       i++;
+       sum1=sum+sum1;
+   }while(i<=10)
+   console.log('1到10的阶乘相加的和等于'+sum1);
+
+   /*
+   document.write('1'+'<br/>');
+   document.write('1'+"  "+'2'+'<br/>');
+   document.write('1'+"  "+'2'+"  "+'3'+'<br/>');
+   document.write('1'+"  "+'2'+"  "+'3'+"  "+'4'+'<br/>');
+   document.write('1'+"  "+'2'+"  "+'3'+"  "+'4'+"  "+'5'+'<br/>');
+   */
+
+        var x = 11; //x 作为行遍历
+        var y = 11; //y 作为列遍历
+        for(var i=x;i>=0;i--){
+           for(var j=0;j<y-i;j++){
+                document.write(" &nbsp;"); //打印空格
+            }
+
+
+
+            for(var j=1;j<2*i;j++){
+                document.write("*");//输出*
+                if(j==2*i-1){
+                    document.write("<br>");
+                }
+
+            }
+        }
+        var a=5;
+        a='abc';
+        console.log(a);
+       var timer=setInterval(function(){console.log(Math.random())},1000);
+       clearInterval(timer);
+       var host=new Object();
+        host.name='lost';
+        host.doing=function(){
+            console.log(this);
+           var timer2= setInterval(function(){console.log(this);},1000);
+           clearInterval(timer2)
+        }
+        host.doing();
+
+       var a=5;
+       var b=6;
+
+       console.log(typeof a);
+       var e=null;
+       console.log(typeof e);
+       var arr=new Array();
+       console.log(arr instanceof Array);
+       console.log(arr.constructor);
+       var arr=new Array(a,b);
+
+     /*var a=[1,2,3];
+     document.write(a.concat(4,5));
+     var b=[1,2,4];
+     document.write(a.concat(b));
+     document.write(a);
+     */
+     var arr=new Array('Tomas','Kitty','Parry','Apple');
+     console.log(arr.sort());
+     var arr1=[1,2,3,4,90,100,34];
+     console.log(arr1.sort(function(a,b){return (a-b)}));
+     console.log(arr1.sort(function(a,b){return (b-a)}));
+     var a=(Math.random()*100);
+    console.log(a);
+    var arr3=[1,2,13,4,90,100,34];
+    arr3.sort(function(a,b){
+        return 0.5-Math.random()
+    })
+    console.log(arr3);
+    var num= Number (13.37);
+    console.log(num.toFixed(1));
+    </script>
+</body>
+</html>
