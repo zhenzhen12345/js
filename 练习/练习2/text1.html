@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding:0;
+            list-style: none;
+        }
+        #container{
+            width: 490px;
+            height: 170px;
+            margin:100px  auto;
+            border:1px solid chocolate;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 10px 20px 5px rgba(100,80,10,0.5);
+        }
+        #uli{
+            width:2450px;
+            height:170px;
+            position: absolute;
+            left: 0;
+            top:0;
+        }
+        #uli li{
+            float: left;
+        }
+        #btn-box ul{
+            position: absolute;
+            bottom:10px;
+            right: 10px;
+            overflow: hidden;
+        }
+        #btn-box div{
+            position: absolute;
+            bottom:10px;
+            left: 10px;
+            overflow: hidden;
+        }
+        #btn-box ul li,#btn-box div span{
+            float: left;
+            width: 20px;
+            height: 20px;
+            background: crimson;
+            border-radius:50%;
+            line-height: 20px;
+            color: aliceblue;
+            text-align: center;
+            margin-right: 10px;
+            cursor: pointer;
+            opacity: 0.8;
+        }
+        #btn-box li.active{
+           background-color:saddlebrown;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+       <div id="container">
+           <ul id="uli">
+               <li><img src="../../img/01.jpg" alt=""></li>
+               <li><img src="../../img/02.jpg" alt=""></li>
+               <li><img src="../../img/03.jpg" alt=""></li>
+               <li><img src="../../img/04.jpg" alt=""></li>
+               <li><img src="../../img/05.jpg" alt=""></li>
+           </ul>
+           <div id="btn-box">
+               <div id="atn">
+                   <span>&lt;</span>
+                   <span>&gt;</span>
+               </div>
+               <ul id="ul1">
+                   <li class="active">1</li>
+                   <li>2</li>
+                   <li>3</li>
+                   <li>4</li>
+                   <li>5</li>
+               </ul>
+           </div>
+       </div>
+       <script>
+             var count=0;
+             var timer,timer1;
+             var IsRun=true;
+             var direction=10;
+             var oCon=document.getElementById('container');
+             var oDiv=document.getElementById('atn');
+             var aSpan=oDiv.getElementsByTagName('span');
+             var oUl=document.getElementById('ul1');
+             var aLl=oUl.getElementsByTagName('li');
+             var oUi=document.getElementById('uli');
+             var aLi=oUi.getElementsByTagName('li');
+             function change(idx) {
+                 IsRun=false;
+                 if(idx==-1){
+                     idx= aLl.length-1;
+                 }
+                 if(idx==aLl.length){
+                     idx=0;
+                 }
+                 if(count>idx) {
+                     direction=10;
+                 }
+                 if(count<idx){
+                     direction=-10;
+                 }
+                 count=idx;
+                 for(var j=0;j<aLl.length;j++){
+                     aLl[j].className='';
+                 }
+                 aLl[idx].className='active';
+                 timer=setInterval(function () {
+                     if(oUi.offsetLeft==-aLi[0].offsetWidth*idx){
+                         clearInterval(timer);
+                         IsRun=true;
+                         count=idx;
+                     }else{
+                         oUi.style.left=oUi.offsetLeft+direction+'px';
+                     }
+              },10)
+             }
+             for(var i=0;i<aLl.length;i++){
+                 aLl[i].index=i;
+                 aLl[i].onclick=function () {
+                     change(this.index);
+                 }
+             }
+             aSpan[0].onclick=function () {
+                 if(IsRun){
+                     change(count-1);
+                 }
+             };
+             aSpan[1].onclick=function () {
+                 if(IsRun){
+                     change(count+1);
+                 }
+             };
+             oCon.onmouseout=function () {
+                 timer1= setInterval(function () {
+                     if(IsRun){
+                             change(count+1);
+                         }
+                 },2000)
+             };
+             oCon.onmouseover=function () {
+                 clearInterval(timer1);
+             };
+         /******
+         * 加个IsRun 加个判断是为了 定时器 一个执行完之后再执行另一个
+          * ****/
+       </script>
+</body>
+</html>
